@@ -38,4 +38,11 @@ public class HomePage extends BasePage {
         click(contextMenu);
         return new ContextMenuPage(driver);
     }
+
+    @FindBy(css = "a[href='/dropdown']")
+    WebElement dropdown;
+    public DropDownPage getDropDownSection() {
+        click(dropdown);
+        return new DropDownPage(driver);
+    }
 }
