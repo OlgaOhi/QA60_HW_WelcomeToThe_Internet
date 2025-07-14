@@ -17,4 +17,18 @@ public class HomePage extends BasePage {
         click(horizontalSliderPage);
         return new HorizontalSliderPage(driver);
     }
+
+    @FindBy(css = "a[href='/drag_and_drop']")
+    WebElement dragAndDrop;
+    public DragAndDropPage selectDragAndDrop() {
+        click(dragAndDrop);
+        return new DragAndDropPage(driver);
+    }
+
+    @FindBy(css = "a[href='/hovers']")
+    WebElement hovers;
+    public HoversPage getHoversSection() {
+        click(hovers);
+        return new HoversPage(driver);
+    }
 }
