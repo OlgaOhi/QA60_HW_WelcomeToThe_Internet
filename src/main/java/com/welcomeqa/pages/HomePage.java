@@ -1,5 +1,6 @@
 package com.welcomeqa.pages;
 
+import com.welcomeqa.pages.fileupload.FileUploaderPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -44,5 +45,12 @@ public class HomePage extends BasePage {
     public DropDownPage getDropDownSection() {
         click(dropdown);
         return new DropDownPage(driver);
+    }
+
+    @FindBy(css = "a[href='/upload']")
+    WebElement upload;
+    public FileUploaderPage getFileUploadSection() {
+        click(upload);
+        return new FileUploaderPage(driver);
     }
 }
